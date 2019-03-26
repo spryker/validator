@@ -5,7 +5,7 @@
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
-namespace Spryker\Shared\Validator\Plugin\FormExtension;
+namespace Spryker\Shared\Validator\Plugin\Form;
 
 use Spryker\Service\Container\ContainerInterface;
 use Spryker\Shared\FormExtension\Dependency\Plugin\FormPluginInterface;
