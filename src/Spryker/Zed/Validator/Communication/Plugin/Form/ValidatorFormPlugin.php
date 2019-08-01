@@ -5,14 +5,18 @@
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
-namespace Spryker\Shared\Validator\Plugin\Form;
+namespace Spryker\Zed\Validator\Communication\Plugin\Form;
 
 use Spryker\Service\Container\ContainerInterface;
 use Spryker\Shared\FormExtension\Dependency\Plugin\FormPluginInterface;
+use Spryker\Zed\Kernel\Communication\AbstractPlugin;
 use Symfony\Component\Form\Extension\Validator\ValidatorExtension;
 use Symfony\Component\Form\FormFactoryBuilderInterface;
 
-class ValidatorFormPlugin implements FormPluginInterface
+/**
+ * @method \Spryker\Zed\Validator\Communication\ValidatorCommunicationFactory getFactory()
+ */
+class ValidatorFormPlugin extends AbstractPlugin implements FormPluginInterface
 {
     protected const SERVICE_VALIDATOR = 'validator';
 
