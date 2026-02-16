@@ -55,7 +55,7 @@ class FileValidator extends SymfonyFileValidator
      * @param string $basename
      * @param string $path
      *
-     * @return list<string>
+     * @return array<string>
      */
     protected function validateExtensions(
         Constraint $constraint,
@@ -98,7 +98,7 @@ class FileValidator extends SymfonyFileValidator
     /**
      * @param mixed $value
      * @param \Symfony\Component\Validator\Constraint $constraint
-     * @param list<string> $mimeTypes
+     * @param array<string> $mimeTypes
      * @param string $basename
      * @param string $path
      *

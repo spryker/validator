@@ -9,9 +9,3 @@ parameters:
         - message: '#Parameter \#18 \$groups of method Symfony\\Component\\Validator\\Constraints\\File::__construct\(\) expects#'
         -
             identifier: function.alreadyNarrowedType
-        -
-            identifier: argument.type
-        -
-            identifier: return.type
-        -
-            identifier: class.notFound

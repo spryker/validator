@@ -15,9 +15,6 @@ use Symfony\Component\Validator\Mapping\Loader\LoaderInterface;
 use Symfony\Component\Validator\Mapping\Loader\StaticMethodLoader;
 use Symfony\Component\Validator\ValidatorBuilder;
 
-/**
- * @method \Spryker\Zed\Validator\ValidatorConfig getConfig()
- */
 class ValidatorCommunicationFactory extends AbstractCommunicationFactory
 {
     /**
