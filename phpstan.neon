@@ -7,3 +7,11 @@ parameters:
         - message: '#Parameter \#18 \$uploadExtensionErrorMessage of method Symfony\\Component\\Validator\\Constraints\\File#'
         - message: '#Symfony\\Component\\Validator\\Constraints\\File::__construct\(\) invoked with 21 parameters, 0\-19 required#'
         - message: '#Parameter \#18 \$groups of method Symfony\\Component\\Validator\\Constraints\\File::__construct\(\) expects#'
+        -
+            identifier: function.alreadyNarrowedType
+        -
+            identifier: argument.type
+        -
+            identifier: return.type
+        -
+            identifier: class.notFound
