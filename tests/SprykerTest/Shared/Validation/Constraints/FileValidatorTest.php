@@ -5,7 +5,7 @@
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
-namespace SprykerTest\Shared\Validator\Constraints;
+namespace SprykerTest\Shared\Validation\Constraints;
 
 use Codeception\Configuration;
 use Spryker\Shared\Validator\Constraints\File;
@@ -19,7 +19,7 @@ use Symfony\Component\Validator\Test\ConstraintValidatorTestCase;
  *
  * @group SprykerTest
  * @group Shared
- * @group Validator
+ * @group Validation
  * @group Constraints
  * @group FileValidatorTest
  * Add your own group annotations below this line
