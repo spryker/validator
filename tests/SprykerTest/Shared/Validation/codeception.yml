@@ -1,4 +1,4 @@
-namespace: SprykerTest\Shared\Validator
+namespace: SprykerTest\Shared\Validation
 
 paths:
     tests: .
