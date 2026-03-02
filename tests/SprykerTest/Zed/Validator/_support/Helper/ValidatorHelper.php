@@ -58,9 +58,6 @@ class ValidatorHelper extends Module
      */
     protected $constraintPlugins = [];
 
-    /**
-     * @return void
-     */
     public function _initialize(): void
     {
         foreach ($this->config[static::CONFIG_KEY_VALIDATOR_PLUGINS] as $constraintPlugin) {
@@ -71,20 +68,12 @@ class ValidatorHelper extends Module
         }
     }
 
-    /**
-     * @return void
-     */
     protected function addDependencies(): void
     {
         $this->getDependencyProviderHelper()->setDependency(ValidatorDependencyProvider::PLUGINS_VALIDATOR, $this->validatorPlugins);
         $this->getDependencyProviderHelper()->setDependency(ValidatorDependencyProvider::PLUGINS_CONSTRAINT, $this->constraintPlugins);
     }
 
-    /**
-     * @param \Codeception\TestInterface $test
-     *
-     * @return void
-     */
     public function _before(TestInterface $test): void
     {
         parent::_before($test);
@@ -96,9 +85,6 @@ class ValidatorHelper extends Module
         );
     }
 
-    /**
-     * @return void
-     */
     protected function setDefaultConfig(): void
     {
         $this->config = [
@@ -122,9 +108,6 @@ class ValidatorHelper extends Module
         return $validatorApplicationPlugin;
     }
 
-    /**
-     * @return \Spryker\Zed\Validator\Communication\ValidatorCommunicationFactory
-     */
     protected function getFactory(): ValidatorCommunicationFactory
     {
         /** @var \Spryker\Zed\Validator\Communication\ValidatorCommunicationFactory $validatorCommunicationFactory */

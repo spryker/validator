@@ -37,11 +37,6 @@ class ConstraintFactoryValidatorPlugin extends AbstractPlugin implements Validat
         return $validatorBuilder;
     }
 
-    /**
-     * @param \Spryker\Service\Container\ContainerInterface $container
-     *
-     * @return \Symfony\Component\Validator\ConstraintValidatorFactoryInterface
-     */
     protected function createConstraintValidationFactory(ContainerInterface $container): ConstraintValidatorFactoryInterface
     {
         return new ConstraintValidatorFactory($container, $this->getFactory()->getConstraintPlugins());

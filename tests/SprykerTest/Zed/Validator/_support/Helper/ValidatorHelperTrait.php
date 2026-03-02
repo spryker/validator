@@ -11,9 +11,6 @@ use Codeception\Module;
 
 trait ValidatorHelperTrait
 {
-    /**
-     * @return \SprykerTest\Zed\Validator\Helper\ValidatorHelper
-     */
     protected function getValidatorHelper(): ValidatorHelper
     {
         /** @var \SprykerTest\Zed\Validator\Helper\ValidatorHelper $validatorHelper */
@@ -22,10 +19,5 @@ trait ValidatorHelperTrait
         return $validatorHelper;
     }
 
-    /**
-     * @param string $name
-     *
-     * @return \Codeception\Module
-     */
     abstract protected function getModule(string $name): Module;
 }

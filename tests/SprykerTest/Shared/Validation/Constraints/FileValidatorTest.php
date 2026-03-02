@@ -71,9 +71,6 @@ class FileValidatorTest extends ConstraintValidatorTestCase
      */
     protected string $filePath;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -81,9 +78,6 @@ class FileValidatorTest extends ConstraintValidatorTestCase
         $this->filePath = $this->createFile();
     }
 
-    /**
-     * @return void
-     */
     protected function tearDown(): void
     {
         parent::tearDown();
@@ -91,9 +85,6 @@ class FileValidatorTest extends ConstraintValidatorTestCase
         $this->removeFile($this->filePath);
     }
 
-    /**
-     * @return void
-     */
     public function testShouldReturnErrorWhenMimeTypeIsNotAllowed(): void
     {
         // Arrange
@@ -113,9 +104,6 @@ class FileValidatorTest extends ConstraintValidatorTestCase
         $violation->assertRaised();
     }
 
-    /**
-     * @return void
-     */
     public function testShouldReturnSuccessWhenMimeTypeIsAllowed(): void
     {
         // Arrange
@@ -129,9 +117,6 @@ class FileValidatorTest extends ConstraintValidatorTestCase
         $this->assertNoViolation();
     }
 
-    /**
-     * @return void
-     */
     public function testShouldReturnErrorWhenExtensionIsNotAllowed(): void
     {
         // Arrange
@@ -151,9 +136,6 @@ class FileValidatorTest extends ConstraintValidatorTestCase
         $violation->assertRaised();
     }
 
-    /**
-     * @return void
-     */
     public function testShouldReturnSuccessWhenExtensionIsAllowed(): void
     {
         // Arrange
@@ -167,9 +149,6 @@ class FileValidatorTest extends ConstraintValidatorTestCase
         $this->assertNoViolation();
     }
 
-    /**
-     * @return void
-     */
     public function testShouldReturnErrorWhenIsEmptyMimeTypesConstraintEnabledAndEmptyListsOfMimeTypesAndExtensionsAreProvided(): void
     {
         // Arrange
@@ -184,9 +163,6 @@ class FileValidatorTest extends ConstraintValidatorTestCase
             ->assertRaised();
     }
 
-    /**
-     * @return void
-     */
     public function testShouldReturnSuccessWhenIsEmptyMimeTypesConstraintDisabledAndEmptyListsOfMimeTypesAndExtensionsAreProvided(): void
     {
         // Arrange
@@ -200,9 +176,6 @@ class FileValidatorTest extends ConstraintValidatorTestCase
         $this->assertNoViolation();
     }
 
-    /**
-     * @return \Symfony\Component\Validator\ConstraintValidator
-     */
     protected function createValidator(): ConstraintValidator
     {
         return new FileValidator();
@@ -227,19 +200,11 @@ class FileValidatorTest extends ConstraintValidatorTestCase
         ]);
     }
 
-    /**
-     * @param string $mimeType
-     *
-     * @return \Symfony\Component\HttpFoundation\File\UploadedFile
-     */
     protected function createUploadedFile(string $mimeType): UploadedFile
     {
         return new UploadedFile($this->filePath, static::TEST_FILE_NAME, $mimeType, null, true);
     }
 
-    /**
-     * @return string
-     */
     protected function createFile(): string
     {
         if (!is_dir(Configuration::dataDir())) {
@@ -252,11 +217,6 @@ class FileValidatorTest extends ConstraintValidatorTestCase
         return $filePath;
     }
 
-    /**
-     * @param string $filePath
-     *
-     * @return void
-     */
     protected function removeFile(string $filePath): void
     {
         unlink($filePath);

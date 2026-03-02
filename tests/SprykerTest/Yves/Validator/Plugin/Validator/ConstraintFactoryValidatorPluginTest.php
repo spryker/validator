@@ -31,9 +31,6 @@ class ConstraintFactoryValidatorPluginTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testConstraintFactoryValidatorPluginExtendsValidationBuilderWithConstraintFactory(): void
     {
         //Arrange
@@ -48,17 +45,11 @@ class ConstraintFactoryValidatorPluginTest extends Unit
         $this->assertInstanceOf(ValidatorBuilder::class, $result);
     }
 
-    /**
-     * @return \Symfony\Component\Validator\ValidatorBuilder
-     */
     protected function createValidatorBuilder(): ValidatorBuilder
     {
         return new ValidatorBuilder();
     }
 
-    /**
-     * @return \Spryker\Service\Container\ContainerInterface
-     */
     protected function createContainer(): ContainerInterface
     {
         return new Container();

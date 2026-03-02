@@ -43,11 +43,6 @@ class ValidatorExtensionFormPlugin extends AbstractPlugin implements FormPluginI
         return $formFactoryBuilder;
     }
 
-    /**
-     * @param \Spryker\Service\Container\ContainerInterface $container
-     *
-     * @return \Symfony\Component\Form\Extension\Validator\ValidatorExtension
-     */
     protected function createValidatorExtension(ContainerInterface $container): ValidatorExtension
     {
         return new ValidatorExtension(

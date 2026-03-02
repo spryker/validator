@@ -16,25 +16,16 @@ use Symfony\Component\Validator\ValidatorBuilder;
 
 class ValidatorFactory extends AbstractFactory
 {
-    /**
-     * @return \Symfony\Component\Validator\ValidatorBuilder
-     */
     public function createValidatorBuilder(): ValidatorBuilder
     {
         return new ValidatorBuilder();
     }
 
-    /**
-     * @return \Symfony\Component\Validator\Mapping\Factory\MetadataFactoryInterface
-     */
     public function createValidatorMappingMetadataFactory(): MetadataFactoryInterface
     {
         return new LazyLoadingMetadataFactory($this->createStaticMethodLoader());
     }
 
-    /**
-     * @return \Symfony\Component\Validator\Mapping\Loader\LoaderInterface
-     */
     public function createStaticMethodLoader(): LoaderInterface
     {
         return new StaticMethodLoader();

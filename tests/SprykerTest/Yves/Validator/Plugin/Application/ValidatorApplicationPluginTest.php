@@ -36,9 +36,6 @@ class ValidatorApplicationPluginTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function tesValidatorApplicationPluginSetsValidationService(): void
     {
         //Arrange
@@ -53,9 +50,6 @@ class ValidatorApplicationPluginTest extends Unit
         $this->assertInstanceOf(ValidatorInterface::class, $container->get(static::SERVICE_VALIDATOR));
     }
 
-    /**
-     * @return \Spryker\Service\Container\ContainerInterface
-     */
     protected function createContainer(): ContainerInterface
     {
         return new Container();

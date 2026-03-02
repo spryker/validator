@@ -128,12 +128,6 @@ class FileValidator extends SymfonyFileValidator
             ->addViolation();
     }
 
-    /**
-     * @param string|null $fileMimeType
-     * @param string $allowedMimeType
-     *
-     * @return bool
-     */
     protected function isMimeTypeValid(?string $fileMimeType, string $allowedMimeType): bool
     {
         if ($allowedMimeType === $fileMimeType) {
@@ -144,11 +138,6 @@ class FileValidator extends SymfonyFileValidator
         return $discrete && $fileMimeType && strstr($fileMimeType, '/', true) === $discrete;
     }
 
-    /**
-     * @param string $code
-     *
-     * @return bool
-     */
     protected function hasContextViolationByCode(string $code): bool
     {
         foreach ($this->context->getViolations() as $violation) {

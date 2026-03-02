@@ -22,11 +22,6 @@ class ValidatorDependencyProvider extends AbstractBundleDependencyProvider
      */
     public const PLUGINS_CONSTRAINT = 'PLUGINS_CONSTRAINT';
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     public function provideCommunicationLayerDependencies(Container $container): Container
     {
         $container = $this->addValidatorPlugins($container);
@@ -35,11 +30,6 @@ class ValidatorDependencyProvider extends AbstractBundleDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addValidatorPlugins(Container $container): Container
     {
         $container->set(static::PLUGINS_VALIDATOR, function () {
@@ -57,11 +47,6 @@ class ValidatorDependencyProvider extends AbstractBundleDependencyProvider
         return [];
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addConstraintPlugins(Container $container): Container
     {
         $container->set(static::PLUGINS_CONSTRAINT, function () {

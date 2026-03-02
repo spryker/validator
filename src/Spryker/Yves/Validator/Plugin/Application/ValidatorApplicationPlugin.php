@@ -39,11 +39,6 @@ class ValidatorApplicationPlugin extends AbstractPlugin implements ApplicationPl
         return $container;
     }
 
-    /**
-     * @param \Spryker\Service\Container\ContainerInterface $container
-     *
-     * @return \Spryker\Service\Container\ContainerInterface
-     */
     protected function addValidatorService(ContainerInterface $container): ContainerInterface
     {
         $container->set(static::SERVICE_VALIDATOR, function (ContainerInterface $container) {
@@ -57,12 +52,6 @@ class ValidatorApplicationPlugin extends AbstractPlugin implements ApplicationPl
         return $container;
     }
 
-    /**
-     * @param \Symfony\Component\Validator\ValidatorBuilder $validatorBuilder
-     * @param \Spryker\Service\Container\ContainerInterface $container
-     *
-     * @return \Symfony\Component\Validator\ValidatorBuilder
-     */
     protected function extendValidator(ValidatorBuilder $validatorBuilder, ContainerInterface $container): ValidatorBuilder
     {
         foreach ($this->getFactory()->getValidatorPlugins() as $validatorPlugin) {

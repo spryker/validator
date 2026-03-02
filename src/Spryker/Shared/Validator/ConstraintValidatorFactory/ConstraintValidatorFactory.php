@@ -41,11 +41,6 @@ class ConstraintValidatorFactory extends SymfonyConstraintValidatorFactory
         $this->registerConstraintPlugins($constraintPlugins);
     }
 
-    /**
-     * @param \Symfony\Component\Validator\Constraint $constraint
-     *
-     * @return \Symfony\Component\Validator\ConstraintValidatorInterface
-     */
     public function getInstance(Constraint $constraint): ConstraintValidatorInterface
     {
         $name = $constraint->validatedBy();
@@ -70,11 +65,6 @@ class ConstraintValidatorFactory extends SymfonyConstraintValidatorFactory
         }
     }
 
-    /**
-     * @param string $constraintName
-     *
-     * @return \Symfony\Component\Validator\ConstraintValidatorInterface|null
-     */
     protected function findConstraintInstance(string $constraintName): ?ConstraintValidatorInterface
     {
         if (isset($this->constraintInstances[$constraintName])) {

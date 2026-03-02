@@ -22,11 +22,6 @@ class ValidatorDependencyProvider extends AbstractBundleDependencyProvider
      */
     public const PLUGINS_CONSTRAINT = 'PLUGINS_CONSTRAINT';
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     public function provideDependencies(Container $container): Container
     {
         $container = $this->addValidatorPlugins($container);
@@ -35,11 +30,6 @@ class ValidatorDependencyProvider extends AbstractBundleDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addValidatorPlugins(Container $container): Container
     {
         $container->set(static::PLUGINS_VALIDATOR, function () {
@@ -57,11 +47,6 @@ class ValidatorDependencyProvider extends AbstractBundleDependencyProvider
         return [];
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addConstraintPlugins(Container $container): Container
     {
         $container->set(static::PLUGINS_CONSTRAINT, function () {
