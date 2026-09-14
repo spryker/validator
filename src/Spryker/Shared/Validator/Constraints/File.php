@@ -20,16 +20,6 @@ class File extends SymfonyFile
     public const INVALID_EXTENSION_ERROR = 'c8c7315c-6186-4719-8b71-5659e16bdcb7';
 
     /**
-     * @var array<string, mixed>|string|null
-     */
-    public array|string|null $extensions = [];
-
-    /**
-     * @var string
-     */
-    public $uploadExtensionErrorMessage = 'A PHP extension caused the upload to fail.';
-
-    /**
      * @var string
      */
     public string $extensionsMessage = 'The extension of the file is invalid ({{ extension }}). Allowed extensions are {{ extensions }}.';
@@ -46,7 +36,7 @@ class File extends SymfonyFile
 
     /**
      * @param array<mixed>|null $options
-     * @param string|int|null $maxSize
+     * @param positive-int|string|null $maxSize
      * @param bool|null $binaryFormat
      * @param list<string>|string|null $mimeTypes
      * @param string|null $notFoundMessage
